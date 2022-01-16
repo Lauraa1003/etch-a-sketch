@@ -1,21 +1,38 @@
 html,body{
     height:100%;
+    width: 100%;
     padding:0;
     margin:0;
-    overflow: hidden;
-  }
+    background: url(/images/clouds.png) no-repeat center center fixed; 
+    background-size: cover;
+}
+   
+
 
   header {
+      margin-bottom: -5%;
+      margin-left: 25%;
+      font-family: 'Bungee Shade', cursive;
+      font-size: 30px;
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-top: 10%;
+      color: tomato;
+  }
+
+  .container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    
   }
 
   .cell {
-    border: 1px solid gray;
-    min-width: 20px;
-    min-height: 20px;
+      background-color: white;
+    border: 1px solid rgba(128, 128, 128, 0.514);
+    min-width: 30px;
+    min-height: 30px;
     display: inline-block;
   }
 
@@ -24,7 +41,98 @@ html,body{
   }
 
   .wrap {
+      background-color: tomato;
+      border-radius: 20px;
+      height: 550px;
+      width: 700px;
+      margin: 50px 550px;
       display: flex;
       justify-content: center;
       align-items: center;
+  }
+
+  .gridpanel{
+      background-color:rgba(253, 252, 251, 0.747);
+      display: flex;
+      flex-direction:column;
+      border-radius: 20px;
+      margin-left: 10%;
+      top: 25%;
+      width: 300px;
+      height: 450px;
+      position:absolute;
+      
+  }
+
+  button{
+      font-size: 20px;
+      font-weight: bold;
+      font-family: 'Indie Flower', cursive;
+      color: white;
+      background-color: rgba(255, 99, 71, 0.644);
+      border-style: none;
+      border-radius: 10px;
+      transition:.3s;
+      cursor: pointer;
+      padding: 5px 5px;
+      margin: 10px 50px;
+  }
+
+  button:hover {
+      transform: scale(0.9);
+      background-color: rgba(255, 99, 71, 0.356);
+  }
+
+  #rainbow {
+        margin-top: 40%;
+        position: relative;
+        background: linear-gradient(-45deg, #f03a3a,#e0e96b,#97f08a,#85a4f1,#c892f8);
+        background-size: 400% 400%;
+        animation: gradientBG 4.5s ease infinite;
+        border: black;
+        color: black;
+     }
+     @keyframes gradientBG {
+         0% {
+             background-position: 0% 50%;
+         }
+         50% {
+             background-position: 100% 50%;
+         }
+         100% {
+             background-position: 0% 50%;
+         }
+     }
+     
+
+
+  #black {
+      background-color: rgba(0, 0, 0, 0.836);
+      color: white;
+    
+  }
+
+
+footer{
+    color: white;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15;
+    letter-spacing: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.fab.fa-github {
+    margin-left: 5px;
+    color: white;
+    font-size: 20px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .fa-github:hover {
+    transform: rotate(360deg) scale(1.2);
   }

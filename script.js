@@ -26,19 +26,72 @@ function makeColumns(cellNum) {
     };
 }; 
 
-// add color to divs when mouseover
+// add rainbow colors to divs when mouseover
+document.getElementById("rainbow").addEventListener("click", addColorGrid);
+const color = [, "#FF7F50", "#FFD700", "#98FB98", "#1E90FF", "#DA70D6" , "#FF4500"];
 
-const color = [, "#3C9EE7", "#E7993C", "#E73C99", "#3CE746", "#E7993C"];
-
- 
-document.querySelectorAll(".cell").forEach((cell) => {
-     cell.addEventListener("mouseover" , (e) => {
-        cell.style.background = color[Math.floor(Math.random() * color.length)];
+function addColorGrid(){
+    document.querySelectorAll(".cell").forEach((cell) => {
+        cell.addEventListener("mouseover" , (e) => {
+         cell.style.background = color[Math.floor(Math.random() * color.length)];
         });
- });    
+     });    
+};
 
 
-  
+ // add black color to divs when mouseover
+ document.getElementById("black").addEventListener("click", addBlackGrid);
+ 
+ function addBlackGrid() {
+     document.querySelectorAll(".cell").forEach((cell) => {
+         cell.addEventListener("mouseover" , (e) => {
+         cell.style.background = "black";
+      });
+    });
+ }
+
+
+//erase colors on the grid
+
+document.getElementById("erase").addEventListener("click", eraseColors);
+
+function eraseColors(){
+    document.querySelectorAll(".cell").forEach((cell) => {
+        cell.addEventListener("mouseover" , (e) => {
+        cell.style.background = "white";
+    });
+});
+}
+
+
+// remove all the grid lines
+document.getElementById("remove").addEventListener("click", removeLines);
+
+function removeLines(){
+    document.querySelectorAll('.cell').forEach((cell) => {
+            cell.style.borderStyle = "hidden";
+    });
+}
+
+//clear the grid
+document.getElementById("clear").addEventListener("click", clearGrid);
+
+function clearGrid(){
+    document.querySelectorAll(".cell").forEach((cell) => {
+        cell.style.background = "white";
+    });
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
