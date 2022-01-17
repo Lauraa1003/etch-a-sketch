@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://kit.fontawesome.com/13dd61c5f0.js" crossorigin="anonymous"></script>
         <title>Etch-a-Sketch</title>    
+        <link rel="icon" type="image/x-icon" href="/images/brush.ico">
         <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
@@ -13,26 +14,34 @@
         <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
     </head>
     <body>
+
         <header>
             <h1 class="title">Etch-a-sketch</h1>
         </header>
+
         
        <div class="gridpanel">
-           <p> </p>
-           <button id="rainbow">Rainbow</button>
-           <button id="black">Black</button>
-           <button id="erase">Erase</button>
-           <button id="clear">Clear</button>
-           <button id="remove">Remove lines</button>
+             <div class="slidecontainer">
+                 <p id="size">Choose size  16 x 16</p>
+             <input type="range" min="1" max="64" value="16" class="slider" id="myRange">
+          </div>
+        
+           <button onclick="playSound()" id="rainbow">Rainbow</button>
+           <button onclick="playSound()" id="black">Black</button>
+           <button onclick="playSound()" id="erase">Erase</button>
+           <button onclick="playSound()" id="clear">Clear</button>
+           <button onclick="playSound(); removeLines()" id="remove">Remove lines</button>
        </div>
     
+    <audio id="sound" src="sounds/mixkit-game-ball-tap-2073.wav"></audio>
+
 
         <div class="wrap">
         <div id="container" class="container"></div>
         </div>
 
         <footer>
-            Copyright © 2021 Laura<a href="https://github.com/Lauraa1003"target="_blank"><i class="fab fa-github"></i></a>
+            Copyright © 2022 Laura<a href="https://github.com/Lauraa1003"target="_blank"><i class="fab fa-github"></i></a>
            </footer>
         <script src="script.js"></script>
     </body>

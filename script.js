@@ -64,28 +64,40 @@ function eraseColors(){
 }
 
 
-// remove all the grid lines
+// remove all the grid lines 
+/*
 document.getElementById("remove").addEventListener("click", removeLines);
 
 function removeLines(){
     document.querySelectorAll('.cell').forEach((cell) => {
-            cell.style.borderStyle = "hidden";
+        cell.style.borderStyle = "hidden";
     });
+} */
+
+function removeLines() {
+    let element = querySelectorAll((".cell").forEach((cell) => {
+    element.classList.toggle("myStyle");
+    }));
 }
+
 
 //clear the grid
 document.getElementById("clear").addEventListener("click", clearGrid);
 
-function clearGrid(){
+function clearGrid() {
     document.querySelectorAll(".cell").forEach((cell) => {
         cell.style.background = "white";
     });
 }
 
+const mySound = document.getElementById('sound');
 
+function playSound() {
+    if (!mySound) return;
+      mySound.currentTime = 0;
+      mySound.play();  
 
-
-
+}
 
 
 
