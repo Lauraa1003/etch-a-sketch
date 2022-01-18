@@ -3,7 +3,7 @@ html,body{
     width: 100%;
     padding:0;
     margin:0;
-    background: url(/images/clouds.png) no-repeat center center fixed; 
+    background: url(clouds.png) no-repeat center center fixed; 
     background-size: cover;
 }
    
@@ -62,16 +62,20 @@ html,body{
   }
 
   .wrap {
+      border-style: groove;
     background-color: tomato;
+    border: 10px solid rgba(255, 255, 0, 0.76);
     border-radius: 20px;
-    height: 650px;
-    width: 650px;
+    height: 600px;
+    width: 600px;
     margin: 50px 550px;
     display: flex;
     justify-content: center;
     align-items: center;
    
   }
+
+  
 
   
 
