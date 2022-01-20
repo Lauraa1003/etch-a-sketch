@@ -5,19 +5,21 @@ html,body{
     margin:0;
     background: url(clouds.png) no-repeat center center fixed; 
     background-size: cover;
+    
 }
    
 
 
   header {
       margin-bottom: -5%;
-      margin-left: 21%;
+      margin-left: 18%;
       font-family: 'Bungee Shade', cursive;
       font-size: 30px;
       display: flex;
       justify-content: center;
       align-items: center;
       color: tomato;
+      
   }
 
  
@@ -35,11 +37,16 @@ html,body{
    
   }
 
-  .myStyle {
+
+
+  .red {
       border-style: hidden;
-      color: turquoise;
+      display: flex;
+      transition: 0.3s;
+      width:100%;
+      flex: 1;
+      flex-wrap: wrap;
   }
-   
 
   .cell {
     background-color: white;
@@ -64,7 +71,7 @@ html,body{
   .wrap {
       border-style: groove;
     background-color: tomato;
-    border: 10px solid rgba(255, 255, 0, 0.76);
+    border: 5px solid rgba(255, 255, 0, 0.76);
     border-radius: 20px;
     height: 600px;
     width: 600px;
@@ -72,7 +79,7 @@ html,body{
     display: flex;
     justify-content: center;
     align-items: center;
-   
+    cursor: url( 'favicon-16x16.png' ), pointer;
   }
 
   
