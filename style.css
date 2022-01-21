@@ -26,7 +26,7 @@ html,body{
 
   .container{
     background-color: rgb(156, 156, 156); 
-    border: 1px solid rgb(156, 156, 156);
+    border: 5px solid rgb(255, 196, 0);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,13 +39,16 @@ html,body{
 
 
 
-  .red {
-      border-style: hidden;
-      display: flex;
-      transition: 0.3s;
-      width:100%;
-      flex: 1;
-      flex-wrap: wrap;
+  .lines {
+    outline-style: none;
+    border: 0px none rgb(255, 253, 253);
+    background-color: white;
+    display: flex;
+    transition: 0.3s;
+    width:100%;
+    flex: 1;
+    flex-wrap: wrap;
+     
   }
 
   .cell {

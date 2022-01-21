@@ -31,7 +31,7 @@ document.getElementById("rainbow").addEventListener("click", addColorGrid);
 const color = [, "#FF7F50", "#FFD700", "#98FB98", "#1E90FF", "#DA70D6" , "#FF4500"];
 
 function addColorGrid(){
-    document.querySelectorAll(".cell").forEach((cell) => {
+    document.querySelectorAll(".cell, .lines").forEach((cell) => {
         cell.addEventListener("mouseover" , (e) => {
          cell.style.background = color[Math.floor(Math.random() * color.length)];
         });
@@ -43,7 +43,7 @@ function addColorGrid(){
  document.getElementById("black").addEventListener("click", addBlackGrid);
  
  function addBlackGrid() {
-     document.querySelectorAll(".cell").forEach((cell) => {
+     document.querySelectorAll(".cell, .lines").forEach((cell) => {
          cell.addEventListener("mouseover" , (e) => {
          cell.style.background = "black";
       });
@@ -56,7 +56,7 @@ function addColorGrid(){
 document.getElementById("erase").addEventListener("click", eraseColors);
 
 function eraseColors(){
-    document.querySelectorAll(".cell").forEach((cell) => {
+    document.querySelectorAll(".cell, .lines").forEach((cell) => {
         cell.addEventListener("mouseover" , (e) => {
         cell.style.background = "white";
     });
@@ -68,16 +68,54 @@ function eraseColors(){
 /*
 document.getElementById("remove").addEventListener("click", removeLines);
 
-function removeLines(){
+function toggleBorder(){
     document.querySelectorAll('.cell').forEach((cell) => {
-        cell.style.borderStyle = "hidden";
+        cell.classList.toggle("red");
     });
 } */
 
-function removeLines() {
-    let element = querySelectorAll((".cell").forEach((cell) => {
-    element.classList.toggle("myStyle");
-    }));
+
+// add another cell class that has a style without border
+// when the cell class with border is removed the one without border should remain
+
+let element = document.querySelectorAll(".cell");
+for (let i = 0; i < element.length; i++) {
+    element[i].classList.add("lines");
+}
+
+
+const cbox = document.querySelectorAll(".cell");
+function toggleBorder(){
+for (let i = 0; i < cbox.length; i++) {
+      cbox[i].classList.toggle("cell");
+    };
+};
+
+/*
+
+function toggleBorder(){
+ var t = document.getElementById("remove");
+const cbox = document.querySelectorAll("cell");
+ for (let i = 0; i < cbox.length; i++) {
+       if(t.textContent=="Remove lines"){
+         cell.style.borderStyle ="hidden";
+       } else if (t.textContent=="Add lines"){
+         cell.style.BorderStyle ="black";
+       }
+       
+     };
+ }
+
+*/
+
+
+function removeLines() { 
+var t = document.getElementById("remove");
+if(t.innerHTML=="Remove lines"){
+    t.innerHTML="Add lines";}
+else{
+    t.innerHTML="Remove lines";}
+
 }
 
 
@@ -85,7 +123,7 @@ function removeLines() {
 document.getElementById("clear").addEventListener("click", clearGrid);
 
 function clearGrid() {
-    document.querySelectorAll(".cell").forEach((cell) => {
+    document.querySelectorAll(".cell, .lines").forEach((cell) => {
         cell.style.background = "white";
     });
 }
@@ -97,7 +135,7 @@ function playSound() {
       mySound.currentTime = 0;
       mySound.play();  
 
-}
+};
 
 
 
