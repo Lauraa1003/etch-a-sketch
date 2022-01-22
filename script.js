@@ -64,19 +64,7 @@ function eraseColors(){
 }
 
 
-// remove all the grid lines 
-/*
-document.getElementById("remove").addEventListener("click", removeLines);
-
-function toggleBorder(){
-    document.querySelectorAll('.cell').forEach((cell) => {
-        cell.classList.toggle("red");
-    });
-} */
-
-
-// add another cell class that has a style without border
-// when the cell class with border is removed the one without border should remain
+// remove all grid lines
 
 let element = document.querySelectorAll(".cell");
 for (let i = 0; i < element.length; i++) {
@@ -91,23 +79,8 @@ for (let i = 0; i < cbox.length; i++) {
     };
 };
 
-/*
 
-function toggleBorder(){
- var t = document.getElementById("remove");
-const cbox = document.querySelectorAll("cell");
- for (let i = 0; i < cbox.length; i++) {
-       if(t.textContent=="Remove lines"){
-         cell.style.borderStyle ="hidden";
-       } else if (t.textContent=="Add lines"){
-         cell.style.BorderStyle ="black";
-       }
-       
-     };
- }
-
-*/
-
+// toggle add lines button 
 
 function removeLines() { 
 var t = document.getElementById("remove");
@@ -138,9 +111,20 @@ function playSound() {
 };
 
 
+// create value range slider 
+/*
+let range = document.getElementById("myRange");
+let output = document.getElementById("size");
+output.innerHTML = rangeslider.value;
 
+rangeslider.oninput = function() {
+    output.innerHTML = this.value;
+}
+*/
 
-
+function updateTextInput() {
+    document.getElementById("textInput").value=val;
+}
 
 
 
