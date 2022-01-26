@@ -112,7 +112,7 @@ function playSound() {
 
 
 // create value range slider 
-
+/*
 let range = document.getElementById("myRange");
 let output = document.getElementById("size");
 output.innerHTML = rangeslider.value;
@@ -120,7 +120,12 @@ output.innerHTML = rangeslider.value;
 rangeslider.oninput = function() {
     output.innerHTML = this.value;
 }
+*/
 
+function range() {
+    var x = document.getElementById("myRange").value;
+    document.getElementById("size").innerHTML = x;
+  }
 
 
 
