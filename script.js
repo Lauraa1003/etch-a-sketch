@@ -19,7 +19,7 @@ function makeRows(rowNum){
 }; 
 
 function makeColumns(cellNum) {
-    for (i = 0; i < rows.length; i++) {
+    for (i = 0; i < cellNum; i++) {
         for (j = 0; j < cellNum; j++) {
              let newCell = document.createElement("div");
              rows[j].appendChild(newCell).className = "cell";
@@ -119,5 +119,18 @@ output.innerHTML = "Grid size : " + slider.value + " x " + slider.value;
 
 slider.oninput = function() {
   output.innerHTML = "Grid size : " + this.value + " X " + this.value;
+  
 }
 
+function changeGridSize() {
+    makeRows(slider.value);
+    makeColumns(slider.value);
+  }
+  
+  slider.addEventListener("mouseup", changeGridSize);
+
+
+/*
+makeRows(this.value);
+  makeColumns(this.value);
+  */
