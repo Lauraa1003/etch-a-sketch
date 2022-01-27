@@ -10,6 +10,7 @@ function defaultGrid(){
     makeColumns(16);
 }
 
+
 function makeRows(rowNum){
     for (r = 0; r < rowNum; r++) {
         let newRow = document.createElement("div");
@@ -112,23 +113,11 @@ function playSound() {
 
 
 // create value range slider 
-/*
-let range = document.getElementById("myRange");
+let slider = document.getElementById("myRange");
 let output = document.getElementById("size");
-output.innerHTML = rangeslider.value;
+output.innerHTML = "Grid size : " + slider.value + " x " + slider.value;
 
-rangeslider.oninput = function() {
-    output.innerHTML = this.value;
+slider.oninput = function() {
+  output.innerHTML = "Grid size : " + this.value + " X " + this.value;
 }
-*/
-
-function range() {
-    var x = document.getElementById("myRange").value;
-    document.getElementById("size").innerHTML = x;
-  }
-
-
-
-
-
 
