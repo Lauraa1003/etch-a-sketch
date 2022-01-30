@@ -66,25 +66,25 @@ function eraseColors(){
 
 
 // remove all grid lines
-
 let element = document.querySelectorAll(".cell");
 for (let i = 0; i < element.length; i++) {
     element[i].classList.add("lines");
-}
+} 
 
 
-const cbox = document.querySelectorAll(".cell");
+let cbox = document.querySelectorAll(".cell");
 function toggleBorder(){
-for (let i = 0; i < cbox.length; i++) {
-      cbox[i].classList.toggle("cell");
+    for (let i = 0; i < cbox.length; i++) {
+        cbox[i].classList.toggle("cell");
     };
+    
 };
 
 
 // toggle add lines button 
 
 function removeLines() { 
-var t = document.getElementById("remove");
+let t = document.getElementById("remove");
 if(t.innerHTML=="Remove lines"){
     t.innerHTML="Add lines";}
 else{
@@ -123,14 +123,16 @@ slider.oninput = function() {
 }
 
 function changeGridSize() {
+    const myNode = document.getElementById("container");
+    myNode.innerHTML = '';
     makeRows(slider.value);
     makeColumns(slider.value);
-  }
+    let element = document.querySelectorAll(".cell");
+    for (let i = 0; i < element.length; i++) {
+        element[i].classList.add("lines");
+    }
+  };
+  
   
   slider.addEventListener("mouseup", changeGridSize);
 
-
-/*
-makeRows(this.value);
-  makeColumns(this.value);
-  */
